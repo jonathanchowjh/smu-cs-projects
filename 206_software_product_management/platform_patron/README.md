@@ -1,8 +1,9 @@
 # Jiak.PNG project documentation
 Jiak.PNG is a full-stack web application that is built on a MERN (MongoDB, Express.js, React.js, Node.js) stack.
-
-![alt text](./pictures/IMG_1651.PNG "Title")
-![alt text](./pictures/IMG_1652.PNG "Title")
+<p align="center">
+  <img src="./pictures/IMG_1651.PNG" width="300" title="Razer Hackathon">
+  <img src="./pictures/IMG_1652.PNG" width="300" title="Razer Hackathon">
+</p>
 
 ## Jiak.club Website
 - Hawker side https://jiak-hawker.vitaverify.me 
