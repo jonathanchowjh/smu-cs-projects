@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- Specify a JDBC datasource -->
+  <Resource name="jdbc/social_magnet"
+    auth="Container"
+    type="javax.sql.DataSource"
+    username="root"
+    password="root"
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:8889/social_magnet?useSSL=false"
+    maxActive="15"
+    maxIdle="3"/>
+    <!-- Specify the security realm and location of the users file
+    <Realm className="org.apache.catalina.realm.MemoryRealm" 
+           pathname="/tomcat/webapps/ROOT/WEB-INF/users.xml" />
+    -->
+</Context>

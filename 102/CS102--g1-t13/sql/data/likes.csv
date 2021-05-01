@@ -1,0 +1,11 @@
+username, pid, isLike
+john,1,0
+lindy,1,0
+jiemi,1,1
+adam,2,1
+jon,3,1
+jiemi,4,1
+jiemi,1,0
+pius,4,0
+lindy,4,1
+lindy,4,0

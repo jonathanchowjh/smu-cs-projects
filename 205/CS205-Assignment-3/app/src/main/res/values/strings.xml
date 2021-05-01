@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lazy Loader</string>
+    <string name="subtitle">status:</string>
+</resources>

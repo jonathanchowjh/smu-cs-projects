@@ -1,0 +1,68 @@
+body {
+  font-size: 16px;
+  font-family: 'Quicksand';
+  margin: 0 auto;
+  padding: 0 auto;
+
+  text-align: center;
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* CLICKABLES */
+[role="button"],
+button,
+input,
+label,
+a,
+select {
+  cursor: pointer;
+  outline: none;
+}
+
+.bigger{
+  font-size: 1.5em;
+}
+
+.page {}
+.page-header {
+  height: 20vh;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-input {
+  height: 40vh;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-input-div {
+  font-size: 1.3em;
+}
+input {
+  font-size: 1em;
+  margin: 0.5em;
+  text-align: center;
+}
+.page-list{
+  background: rgb(200,200,200);
+  padding: 2em;
+}
+.page-list-header {
+  font-size: 1.5em;
+  color: white;
+  background:rgb(100,100,100);
+}
+.page-list-map{
+  max-height: calc(40vh - 6em);
+  height: calc(40vh - 6em);
+  overflow: scroll;
+}
+.page-list-sentence{
+  margin: 0.6em;
+  font-size: 1.5em;
+}

@@ -1,0 +1,13 @@
+gid,gifter,giftee,crop,accepted,dt
+1,jon,jiemi,Papaya,0,2020-01-01 13:01:52
+2,lindy,jon,Pumpkin,0,2020-01-01 13:01:52
+3,adam,jon,Pumpkin,0,2020-01-01 13:01:52
+4,pius,jon,Pumpkin,0,2020-01-01 13:01:52
+5,luke,jon,Pumpkin,0,2020-01-01 13:01:52
+6,lindy,jon,Pumpkin,1,2020-01-01 13:01:52
+7,adam,lindy,Pumpkin,1,2020-01-01 13:01:52
+8,lindy,adam,Sunflower,0,2020-01-01 13:01:52
+9,lindy,pius,Sunflower,1,2020-01-01 13:01:52
+10,lindy,luke,Sunflower,1,2020-01-01 13:01:52
+11,jiemi,pius,Sunflower,1,2020-01-01 13:01:52
+12,pius,jiemi,Sunflower,0,2020-01-01 13:01:52

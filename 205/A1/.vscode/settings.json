@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "readline.h": "c",
+    "sstream": "c",
+    "setjmp.h": "c"
+  }
+}

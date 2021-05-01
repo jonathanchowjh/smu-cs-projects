@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F9EBE0;
+    background-repeat: no-repeat;
+    
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-login {
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 20px;
+    width: 314px;
+    height: 50px;
+    left: 30px;
+    top: 472px;
+    
+}
+.border {
+    border: 0px!important;
+}
+
+.elements-login {
+    font-family: "Montserrat";
+    color: #EE693F;
+}
+
+.btn1-main {
+    font-family: 'Nunito';
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 30px;
+    position: absolute;
+    width: 150px;
+    height: 184.09px;
+    left: 24px;
+    top: 308.77px;
+}
+
+.btn2-main {
+    font-family: 'Nunito';
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 30px;
+    position: absolute;
+    width: 150px;
+    height: 184.09px;
+    left: 196px;
+    top: 308.77px;
+}
+
+.elements-hawker-centres-list {
+    font-family: Nunito;
+    border-radius: 20px;   
+}
+
+.headers {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 50px;
+    color: #000000;
+    text-align: left;
+    padding-left: 20px;
+    
+}
+
+.card {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 2px solid #F2994A;
+}
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.dish-card {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: transparent;
+}
+
+.card-header {
+    padding: 1rem 1rem;
+    background-color: transparent;
+}
+
+.dish-name-price {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.dish-btn {
+    font-family: 'Nunito';
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.btn-outline-primary {
+    font-family: 'Nunito';
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    font-family: 'Nunito';
+    background-color:#EE693F;
+    border-color: #EE693F;
+    color: #FFFFFF;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.bg-light {
+    background-color: transparent!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Montserrat';
+    color:  #EE693F;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: 0px;
+}

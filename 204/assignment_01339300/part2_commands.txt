@@ -1,0 +1,21 @@
+Server to client
+	 WHAT_TYPE = 29 (Asks which game type it will be, Second byte is NO_COMMAND)										
+	 PLAYER_ONE_PLAY = 2b (Second byte is NO_COMMAND)
+	 PLAYER_TWO_PLAY = 2d (Second byte is player 2's move)
+	 PLAY_IS_GOOD = 31 (Second byte is player's move being sent back)
+	 GAME_OVER = 39 (Second byte is one of the 3 below)
+	 DRAW = 40 (Possible second byte of GAME_OVER)
+	 PLAYER_ONE_WON = 02 (Possible second byte of GAME_OVER)
+	 PLAYER_TWO_WON = 44 (Possible second byte of GAME_OVER)
+
+Client to Server
+	 NORMAL_MOVE = 4b (Second byte is the client's move)
+	 FORFEIT = 4c (Second byte is NO_COMMAND)
+	 PLAY_AGAIN = 4d (Second byte is NO_COMMAND)
+	 NOT_PLAY_AGAIN = 4f (Second byte is NO_COMMAND)
+	 GAME_TYPE = 55 (Second byte is type)
+	 SINGLEPLAYER = 5f (Possible second byte of GAME_TYPE)
+
+
+Used for both client to server and server to client communication
+	 NO_COMMAND = 0e

@@ -1,0 +1,5 @@
+Name,Cost,Time,XP,MinYield,MaxYield,SalePrice
+Papaya,20,30,8,75,100,15
+Pumpkin,30,60,5,5,200,20
+Sunflower,40,120,20,15,20,40
+Watermelon,50,240,1,5,800,10

@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS portfolio;
+CREATE DATABASE IF NOT EXISTS portfolio;
+
+USE portfolio;
