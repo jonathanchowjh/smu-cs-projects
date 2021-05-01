@@ -2,7 +2,7 @@
 
 ### Modules
 - CS102 Object Oriented Programming
-  - [Project: Social media & Simple game]()
+  - [Project: Social media & Simple game](https://github.com/jonathanchowjh/smu_cs_projects/tree/main/102_oop/final_project)
     - Javac compiled API & Tomcat Server
 - CS105 Data Science and Statistics
   - Project: Wine quality based on chemical properties
