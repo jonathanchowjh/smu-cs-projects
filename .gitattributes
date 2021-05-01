@@ -1,0 +1,4 @@
+*.rb linguist-language=Java
+*.rb linguist-vendored=Java
+
+jc_ansiterm_0.1/* linguist-vendored=true
