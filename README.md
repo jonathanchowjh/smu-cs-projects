@@ -1,6 +1,11 @@
 # smu_cs_projects
 
-### Modules & my projects
+### Favorite Projects
+- [CS206: Mobile QR code hawker center ordering platform (Jiak)](./206_software_product_management/platform_patron)
+- [CS420: Heuritic Search, Astar search, MDP, RL, NLP](./420_artificial_intelligence/code_assignment_2)
+- [CS205: Cacheing in Android - Multi level cache for lazy loading of list of content](./205_operating_systems/assignment_3)
+
+### Modules & my Projects
 - CS102 Object Oriented Programming
   - [Project: Social media & Simple game](./102_oop/final_project)
     - Javac compiled API & Tomcat Server
