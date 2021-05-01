@@ -1,6 +1,9 @@
 # Jiak.PNG project documentation
 Jiak.PNG is a full-stack web application that is built on a MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
+![alt text](./pictures/IMG_1651.PNG "Title")
+![alt text](./pictures/IMG_1652.PNG "Title")
+
 ## Jiak.club Website
 - Hawker side https://jiak-hawker.vitaverify.me 
   - Username: 202033100A
