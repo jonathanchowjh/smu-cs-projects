@@ -1,12 +1,8 @@
 # CS205-Assignment-3: Lazy Loader
 
-**Members**:
-
-* Bryan Lee
-* Charlie Angriawan
-* Emmanuel Oh
-* Jonathan Chow
-* Yap Lee Sim
+<p align="center">
+  <img src="./pictures/architecture.png" width="400" title="Razer Hackathon">
+</p>
 
 ## Description
 
