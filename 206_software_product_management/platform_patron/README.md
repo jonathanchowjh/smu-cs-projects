@@ -1,8 +1,8 @@
 # Jiak.PNG project documentation
 Jiak.PNG is a full-stack web application that is built on a MERN (MongoDB, Express.js, React.js, Node.js) stack.
 <p align="center">
-  <img src="./pictures/IMG_1651.PNG" width="300" title="Razer Hackathon">
-  <img src="./pictures/IMG_1652.PNG" width="300" title="Razer Hackathon">
+  <img src="./pictures/IMG_1651.PNG" width="200" title="Razer Hackathon">
+  <img src="./pictures/IMG_1652.PNG" width="200" title="Razer Hackathon">
 </p>
 
 ## Jiak.club Website
