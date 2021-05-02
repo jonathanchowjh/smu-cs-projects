@@ -7,7 +7,7 @@
 
 ### Modules & my Projects
 - CS102 Object Oriented Programming
-  - [Project: Social media & Simple game](./102_oop/final_project)
+  - [Project: Social media & Farming game](./102_oop/final_project)
     - Javac compiled API & Tomcat Server
 - CS105 Data Science and Statistics
   - [Project: Wine quality based on chemical properties](./105_data_science/wine-quality-jupyter)
