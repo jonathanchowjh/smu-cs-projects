@@ -24,7 +24,7 @@
     - OAuth, https certificates, trading environment, account & portfolio management
     - Platform: Spring Server hosted on AWS
 - CS204 Networking
-  - [Assignment: Threads with python](./204_networking/assignment_01339300)
+  - [Assignment: TCP/IP with python](./204_networking/assignment_01339300)
 - CS205 Operating System
   - [Assignment 1: Process Scheduler - creating, prioritising, & terminating processes](./205_operating_systems/assignment_1)
   - [Assignment 2: Cacheing in Android - Multi level cache for lazy loading of list of content](./205_operating_systems/assignment_3)
