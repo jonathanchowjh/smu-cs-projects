@@ -1,8 +1,10 @@
 # CS205-Assignment-3: Lazy Loader
 
 <p align="center">
-  <img src="./pictures/architecture.png" width="500" title="Razer Hackathon">
+  <img src="./pictures/architecture.png" height="200" title="Razer Hackathon">
+  <img src="./pictures/phone.png" height="200" title="Razer Hackathon">
 </p>
+
 
 ## Description
 
