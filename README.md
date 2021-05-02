@@ -4,7 +4,7 @@
   <img src="./206_software_product_management/platform_patron/pictures/IMG_1651.PNG" height="150" title="Razer Hackathon">
   <img src="./205_operating_systems/assignment_3/pictures/architecture.png" height="150" title="Razer Hackathon">
   <img src="./201_data_structures/final_project/pictures/interface.png" height="150" title="Razer Hackathon">
-  <img src="./pictures/IMG_1654.PNG" height="150" title="Razer Hackathon">
+  <img src="./201_data_structures/final_project/pictures/structure.png" height="150" title="Razer Hackathon">
 </p>
 
 ### Favorite Projects
