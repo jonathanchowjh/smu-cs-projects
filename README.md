@@ -14,7 +14,7 @@
 - [CS206: Mobile QR code hawker center ordering platform (Jiak)](./206_software_product_management/platform_patron)
 - [CS420: Heuritic Search, Astar search, MDP, RL, NLP](./420_artificial_intelligence/code_assignment_2)
 - [CS205: Cacheing in Android - Multi level cache for lazy loading of list of content](./205_operating_systems/assignment_3)
-- [CS201: Graphs - Joke Generator](./201_data_structures/final_project)
+- [CS201: Graphs & RBT - Joke Generator](./201_data_structures/final_project)
 
 ### Modules & my Projects
 - CS102 Object Oriented Programming
@@ -24,7 +24,7 @@
   - [Project: Wine quality based on chemical properties](./105_data_science/wine-quality-jupyter)
     - Multiple Linear Regression and Cross Validation
 - CS201 Data Structures
-  - [Project: Graphs - Joke Generator](./201_data_structures/final_project)
+  - [Project: Graphs & RBT - Joke Generator](./201_data_structures/final_project)
     - Graphs & Viterbi Algorithm
     - Platform: React & Springboot frameworks
 - CS202 Algorithms
