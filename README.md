@@ -1,5 +1,12 @@
 # smu_cs_projects
 
+<p align="center">
+  <img src="./206_software_product_management/platform_patron/pictures/IMG_1651.PNG" width="120" title="Razer Hackathon">
+  <img src="./205_operating_systems/assignment_3/pictures/architecture.png" width="120" title="Razer Hackathon">
+  <img src="./pictures/IMG_1653.PNG" width="120" title="Razer Hackathon">
+  <img src="./pictures/IMG_1654.PNG" width="120" title="Razer Hackathon">
+</p>
+
 ### Favorite Projects
 - [CS206: Mobile QR code hawker center ordering platform (Jiak)](./206_software_product_management/platform_patron)
 - [CS420: Heuritic Search, Astar search, MDP, RL, NLP](./420_artificial_intelligence/code_assignment_2)
