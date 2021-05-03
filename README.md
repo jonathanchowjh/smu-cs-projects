@@ -40,7 +40,7 @@
   - [Assignment 1: Process Scheduler - creating, prioritising, & terminating processes](./205_operating_systems/assignment_1)
   - [Assignment 2: Cacheing in Android - Multi level cache for lazy loading of list of content](./205_operating_systems/assignment_3)
 - ***CS206 Software Product Management***
-  - [Project: Mobile QR code hawker center ordering platform (Jiak)](./206_software_product_management/platform_patron)
+  - [Project: Mobile QR code hawker center ordering platform (Jiak-patron)](./206_software_product_management/platform_patron)
     - Platform: React, Node, MongoDB, AWS
     - 2 sided application
       - [platform_patron (patron facing frontend)](./206_software_product_management/platform_patron)
