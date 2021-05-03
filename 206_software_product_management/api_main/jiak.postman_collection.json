@@ -1,0 +1,1261 @@
+{
+	"info": {
+		"_postman_id": "871918d2-ec58-4624-8f35-42509891fa11",
+		"name": "jiak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer-authentication",
+			"item": [
+				{
+					"name": "bouncer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/auth/gateway",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "register user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"99998888\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/auth/register",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"login valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"",
+									"    pm.environment.set(\"uid\", responseJson[\"message\"]);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"99998888\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"login valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"",
+									"    pm.environment.set(\"uid\", responseJson[\"message\"]);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"96329186\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "bouncer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/auth/gateway",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "logout user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"logout valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"    pm.expect(responseJson.message).to.equal(true);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{server}}{{base}}/customer/auth/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer-orders",
+			"item": [
+				{
+					"name": "get table",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{base}}/customer/qr?mapId=602a185442aa3b5c074a241e&number=2",
+							"host": [
+								"{{server}}{{base}}"
+							],
+							"path": [
+								"customer",
+								"qr"
+							],
+							"query": [
+								{
+									"key": "mapId",
+									"value": "602a185442aa3b5c074a241e"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								}
+							]
+						},
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "get hawker",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{base}}/customer/stall?uen=202033100A",
+							"host": [
+								"{{server}}{{base}}"
+							],
+							"path": [
+								"customer",
+								"stall"
+							],
+							"query": [
+								{
+									"key": "uen",
+									"value": "202033100A"
+								}
+							]
+						},
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "make order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uen\": \"202033100A\",\n    \"orderList\": [\n        {\n            \"menuid\": \"602a2a25139368990648d888\",\n            \"quantity\": 2 \n        },\n        {\n            \"menuid\": \"602a2a40139368990648d889\",\n            \"quantity\": 5\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/order",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/order",
+						"description": "testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer-favourites",
+			"item": [
+				{
+					"name": "get favourites",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapId\": \"602a185442aa3b5c074a241e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/favourite",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "add favourite",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapId\": \"602a185442aa3b5c074a241e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/favourite",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "remove favourite",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapId\": \"602a185442aa3b5c074a241e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/favourite",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve recents",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/customer/recents",
+						"description": "testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stall-authentication",
+			"item": [
+				{
+					"name": "bouncer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/auth/gateway",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "register user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uen\": \"202033100A\",\n    \"name\": \"Muslim Delights\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/auth/register",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"login valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"",
+									"    pm.environment.set(\"uid\", responseJson[\"message\"]);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uen\": \"201023709H\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"login valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"",
+									"    pm.environment.set(\"uid\", responseJson[\"message\"]);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"96329186\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "bouncer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/auth/gateway",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "logout user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"logout valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"    pm.expect(responseJson.message).to.equal(true);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{server}}{{base}}/stall/auth/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stall-menu",
+			"item": [
+				{
+					"name": "retrieve menu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}{{base}}/stall/menu",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "insert menu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lontong Sayur\",\n    \"description\": \"Rice cake with curry and vegetables\",\n    \"image\": \"base65+//something:123216r35abcd321\",\n    \"price\": 3.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/menu",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve menu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}{{base}}/stall/menu",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "update menu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"602a126631a2227697f8d254\",\n    \"name\": \"soy milk\",\n    \"description\": \"soy bean smashed to water\",\n    \"image\": \"base65+//something:123216r35abcd321\",\n    \"price\": 3.50,\n    \"availability\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/menu",
+						"description": "testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stall-hours",
+			"item": [
+				{
+					"name": "retrieve hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}{{base}}/stall/hours",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "update hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"operatinghours\": {\n        \"monday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"tuesday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"wednesday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"thursday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"friday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"saturday\": {\n            \"open\": 7,\n            \"close\": 9\n        },\n        \"sunday\": {\n            \"open\": 7,\n            \"close\": 9\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/hours",
+						"description": "testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stall-orders",
+			"item": [
+				{
+					"name": "retrieve orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/order",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "update orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 1,\n    \"status\": \"Done\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/order",
+						"description": "testing"
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"register valid\", () => {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(pm.response.code).to.equal(401);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"userIteration\", pm.info.iteration + 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}{{base}}/stall/order",
+						"description": "testing"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

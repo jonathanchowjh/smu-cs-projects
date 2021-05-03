@@ -43,9 +43,9 @@
   - [Project: Mobile QR code hawker center ordering platform (Jiak)](./206_software_product_management/platform_patron)
     - Platform: React, Node, MongoDB, AWS
     - 2 sided application
-      - platform_patron (patron facing frontend)
-      - platform_hawker (hawker facing frontend)
-      - backend (NodeJS, MongoDB)
+      - [platform_patron (patron facing frontend)](./206_software_product_management/platform_patron)
+      - [platform_hawker (hawker facing frontend)](./206_software_product_management/platform_hawker)
+      - [backend (NodeJS, MongoDB)](./206_software_product_management/api_main)
 - ***CS420 Artificial Intelligence***
   - [Assignment 1: Bayesian Networks, ANN, CNN](./420_artificial_intelligence/assignment_1.pdf)
   - [Assignment 2: Heuritic Search, Astar search, MDP, RL, NLP](./420_artificial_intelligence/code_assignment_2)
