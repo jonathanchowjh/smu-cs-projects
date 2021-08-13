@@ -1,7 +1,7 @@
 # smu_cs_projects
 
 <p align="center">
-  <img src="./206_software_product_management/platform_patron/pictures/IMG_1652.PNG" height="150" title="cs_project">
+  <img src="./206_software_product_management/platform_patron/pictures/jiak.png" height="150" title="cs_project">
   <img src="./205_operating_systems/assignment_3/pictures/phone.png" height="150" title="cs_project">
   <img src="./205_operating_systems/assignment_3/pictures/architecture.png" height="150" title="cs_project">
 </p>
