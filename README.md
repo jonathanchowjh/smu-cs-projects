@@ -2,12 +2,12 @@
 
 <p align="center">
   <img src="./206_software_product_management/platform_patron/pictures/jiak.png" height="150" title="cs_project">
-  <img src="./205_operating_systems/assignment_3/pictures/phone.png" height="150" title="cs_project">
   <img src="./205_operating_systems/assignment_3/pictures/architecture.png" height="150" title="cs_project">
 </p>
 <p align="center">
   <img src="./201_data_structures/final_project/pictures/interface.png" height="150" title="cs_project">
   <img src="./201_data_structures/final_project/pictures/structure.png" height="150" title="cs_project">
+  <img src="./205_operating_systems/assignment_3/pictures/phone.png" height="150" title="cs_project">
 </p>
 
 ### Favorite Projects
